@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TrInk: Ink Generation with Transformer Network</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f9f9f9;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 24px;
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+    .text-label {
+      font-weight: bold;
+      font-size: 16px;
+      margin: 10px 0;
+    }
+    .sample-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 240px);
+      gap: 20px;
+      align-items: start;
+      justify-content: start;
+    }
+    .method-header {
+      font-weight: bold;
+      font-size: 18px;
+      padding: 10px 0;
+      border-bottom: 3px dashed #333;
+    }
+    .sample-grid img {
+      width: 240px;
+      height: auto;
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+<h1>TrInk: Ink Generation with Transformer Network</h1>
+
+<h2>Full Text</h2>
+<div class="sample-grid">
+  <div class="method-header">AlexRNN</div>
+  <div class="method-header">AlexRNN (Top-k)</div>
+  <div class="method-header">TrInk</div>
+  <div class="method-header">TrInk (Top-k)</div>
+</div>
+
+<div class="text-label">Text: his operation was over.</div>
+<div class="sample-grid">
+  <img src="figure/full/no_priming_9_alexrnn.png">
+  <img src="figure/full/no_priming_9_alexrnntop.png">
+  <img src="figure/full/no_priming_9_trink.png">
+  <img src="figure/full/no_priming_9_trinktop.png">
+</div>
+
+<div class="text-label">Text: organising those girls who</div>
+<div class="sample-grid">
+  <img src="figure/full/no_priming_438_alexrnn.png">
+  <img src="figure/full/no_priming_438_alexrnntop.png">
+  <img src="figure/full/no_priming_438_trink.png">
+  <img src="figure/full/no_priming_438_trinktop.png">
+</div>
+
+<div class="text-label">Text: short time for Scarburgh's</div>
+<div class="sample-grid">
+  <img src="figure/full/no_priming_501_alexrnn.png">
+  <img src="figure/full/no_priming_501_alexrnntop.png">
+  <img src="figure/full/no_priming_501_trink.png">
+  <img src="figure/full/no_priming_501_trinktop.png">
+</div>
+
+<div class="text-label">Text: No doubt, too, that he had been</div>
+<div class="sample-grid">
+  <img src="figure/full/no_priming_580_alexrnn.png">
+  <img src="figure/full/no_priming_580_alexrnntop.png">
+  <img src="figure/full/no_priming_580_trink.png">
+  <img src="figure/full/no_priming_580_trinktop.png">
+</div>
+
+<div class="text-label">Text: her daughter and son-in-law.</div>
+<div class="sample-grid">
+  <img src="figure/full/no_priming_601_alexrnn.png">
+  <img src="figure/full/no_priming_601_alexrnntop.png">
+  <img src="figure/full/no_priming_601_trink.png">
+  <img src="figure/full/no_priming_601_trinktop.png">
+</div>
+
+<h2>Short Text</h2>
+<div class="sample-grid">
+  <div class="method-header">AlexRNN</div>
+  <div class="method-header">AlexRNN (Top-k)</div>
+  <div class="method-header">TrInk</div>
+  <div class="method-header">TrInk (Top-k)</div>
+</div>
+
+<div class="text-label">Text: Mary's inspection.</div>
+<div class="sample-grid">
+  <img src="figure/short/no_priming_291_alexrnn.png">
+  <img src="figure/short/no_priming_291_alexrnntop.png">
+  <img src="figure/short/no_priming_291_trink.png">
+  <img src="figure/short/no_priming_291_trinktop.png">
+</div>
+
+<div class="text-label">Text: joking.</div>
+<div class="sample-grid">
+  <img src="figure/short/no_priming_13_alexrnn.png">
+  <img src="figure/short/no_priming_13_alexrnntop.png">
+  <img src="figure/short/no_priming_13_trink.png">
+  <img src="figure/short/no_priming_13_trinktop.png">
+</div>
+
+<div class="text-label">Text: required.</div>
+<div class="sample-grid">
+  <img src="figure/short/no_priming_52_alexrnn.png">
+  <img src="figure/short/no_priming_52_alexrnntop.png">
+  <img src="figure/short/no_priming_52_trink.png">
+  <img src="figure/short/no_priming_52_trinktop.png">
+</div>
+
+<h2>Long Text</h2>
+<div class="sample-grid">
+  <div class="method-header">AlexRNN</div>
+  <div class="method-header">AlexRNN (Top-k)</div>
+  <div class="method-header">TrInk</div>
+  <div class="method-header">TrInk (Top-k)</div>
+</div>
+
+<div class="text-label">Text: towards the fireplace. Despite the warmth</div>
+<div class="sample-grid">
+  <img src="figure/long/no_priming_244_alexrnn.png">
+  <img src="figure/long/no_priming_244_alexrnntop.png">
+  <img src="figure/long/no_priming_244_trink.png">
+  <img src="figure/long/no_priming_244_trinktop.png">
+</div>
+
+<div class="text-label">Text: suitcase key and a device designed to lock</div>
+<div class="sample-grid">
+  <img src="figure/long/no_priming_399_alexrnn.png">
+  <img src="figure/long/no_priming_399_alexrnntop.png">
+  <img src="figure/long/no_priming_399_trink.png">
+  <img src="figure/long/no_priming_399_trinktop.png">
+</div>
+
+<div class="text-label">Text: afraid to return home without something</div>
+<div class="sample-grid">
+  <img src="figure/long/no_priming_522_alexrnn.png">
+  <img src="figure/long/no_priming_522_alexrnntop.png">
+  <img src="figure/long/no_priming_522_trink.png">
+  <img src="figure/long/no_priming_522_trinktop.png">
+</div>
+
+</body>
+</html>
